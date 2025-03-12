@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Самые высокие здания и сооружения</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+<!-- Подключение макроса -->
+{% import "macros.html" as macros %}
+<a id="top"></a>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#buildings_list">Список зданий</a></li>
+            <li><a href="#types_buildings">Список типов</a></li>
+            <li><a href="#country">Информация по странам</a></li>
+            <li><a href="#years">Информация по годам</a></li>
+            <li><a href="#years_period">Информация за период</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="tables">
+    <!-- Вызов макросов для вывода таблицы -->
+    <h3 id="buildings_list">Список зданий</h3>
+    {{ macros.render_table(buildings_head, buildings_body) }}
+    <a href="#top">
+        <button class="back-button">Назад</button>
+    </a>
+
+    <h3 id="types_buildings">Типы зданий</h3>
+    {{ macros.render_table(types_head, types_body) }}
+    <a href="#top">
+        <button class="back-button">Назад</button>
+    </a>
+
+    <h3 id="country">Информация по странам</h3>
+    {{ macros.render_table(country_head, country_body) }}
+    <a href="#top">
+        <button class="back-button">Назад</button>
+    </a>
+
+    <h3 id="years">Информация по годам</h3>
+    {{ macros.render_table(years_head, years_body) }}
+    <a href="#top">
+        <button class="back-button">Назад</button>
+    </a>
+
+    <h3 id="years_period">Информация за период</h3>
+    {{ macros.render_table(years_period_head, years_period_body) }}
+    <a href="#top">
+        <button class="back-button">Назад</button>
+    </a>
+</div>
+
+</body>
+</html>
